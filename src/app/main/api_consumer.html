@@ -1,0 +1,234 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> AIMS API CONSUMER </title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body {
+			padding-top: 70px;
+		}
+
+		footer {
+			border-top: 1px solid #eee;
+			margin-top: 40px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		.nav-tabs { border-bottom: 2px solid #DDD; }
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+	.nav-tabs > li > a { border: none; color: #666; }
+		.nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #4285F4 !important; background: transparent; }
+		.nav-tabs > li > a::after { content: ""; background: #4285F4; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+	.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+.tab-pane { padding: 15px 0; }
+.tab-content{padding:20px}
+
+.card {background: #FFF none repeat scroll 0% 0%; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); margin-bottom: 30px; }
+	</style>
+	
+</head>
+<body>
+<nav class="navbar-nav navbar-inverse navbar-fixed-top">
+  <div class="container">
+	<div class="navbar-header" >
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="/"> AIMS API CONSUMER </a>
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse">
+	  
+
+	  
+		<ul class="nav navbar-nav navbar-right">
+		  <li class="divider-vertical"></li>
+		  <li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">test <b class="caret"></b></a>
+			<ul class="dropdown-menu" role="menu">
+			  <li><a href="/accounts/logout/">Logout</a></li>
+			</ul>
+		  </li>
+		</ul>
+	  
+	</div>
+  </div>
+</nav>
+
+<div class="container">
+  
+  <h2>Consume the API</h2>
+
+  <div class="row">
+	<div class="col-sm-5">
+	
+										<!-- Nav tabs --><div class="card">
+									<ul class="nav nav-tabs" role="tablist">
+										<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Create User</a></li>
+										<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Get User(s)</a></li>
+										<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Get Group(s) </a></li>
+										
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="home">
+											<form class="form-horizontal">
+												<fieldset>
+
+<!-- Form Name -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Request Token</label>  
+  <div class="col-md-6">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Email">Email</label>  
+  <div class="col-md-6">
+  <input id="Email" name="Email" type="text" placeholder="" class="form-control input-md" required="">
+	
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Username">Username</label>	 
+  <div class="col-md-6">
+  <input id="Username" name="Username" type="text" placeholder="" class="form-control input-md" required="">
+	
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password </label>
+  <div class="col-md-6">
+	<input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+	
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+	<button id="submit" name="submit" class="btn btn-primary">POST</button>
+  </div>
+</div>
+
+</fieldset>
+											</form>
+										</div>
+										
+										<div role="tabpanel" class="tab-pane" id="profile">
+											<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Request Token</label>  
+  <div class="col-md-5">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Primary Key (if needed)</label>  
+  <div class="col-md-5">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-success">GET</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+										</div>
+										<div role="tabpanel" class="tab-pane" id="messages">
+										<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Request Token</label>  
+  <div class="col-md-5">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Primary Key (if needed)</label>  
+  <div class="col-md-5">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-success">GET</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+										</div>
+										
+									</div>
+</div>
+
+	</div>
+	<div class="col-sm-7">
+	  <p>Response: <span id="idStatus"></span></p>
+	  <pre id="idResponse"></pre>
+	</div>
+  </div>
+
+
+</div>
+
+
+<footer class="container text-center">
+  <a href="https://evonove.it"><img width="80px" src="https://evonove.it/img/logo.png"></a>
+  &nbsp; Django OAuth Toolkit version 0.7.2
+</footer>
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http:s//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

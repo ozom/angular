@@ -1,0 +1,99 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> AIMS API CONSUMER </title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+
+        footer {
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    </style>
+    
+</head>
+<body>
+<nav class="navbar-nav navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"> AIMS API CONSUMER </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      
+
+      
+        <ul class="nav navbar-nav navbar-right">
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">test <b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/accounts/logout/">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Hello!</h1>
+        <p>
+            Welcome to the AIMS API Playground, an utility to show off what you can do with the AIMS API's capabilities.
+            This app will guide you through the process of creating an application up to interacting with the AIMS ressources.
+        </p>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <h3> You're new !!! Create an account</h3>
+          <h4><a class="btn btn-default" href="#/register/">Registration &raquo;</a></h4>
+        </div>
+        <div class="col-md-3">
+          <h3> Already registered !</h3>          
+          <h4><a class="btn btn-default" href="/apiclient">Create an app &raquo;</a></h4>
+       </div>
+        <div class="col-md-3">
+          <h3> Don't have a token or it expired</h3>
+          <h4><a class="btn btn-default" href="#/register/">Request a new token &raquo;</a></h4>
+        </div>
+        <div class="col-md-3">
+          <h3> Everything set up ?</h3>
+          <h4><a class="btn btn-default" href="#/register/">Consume API &raquo;</a></h4>
+        </div>
+      </div>
+
+</div>
+
+
+<footer class="container text-center">
+  <a href="https://evonove.it"><img width="80px" src="https://evonove.it/img/logo.png"></a>
+  &nbsp; Django OAuth Toolkit version 0.7.2
+</footer>
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
